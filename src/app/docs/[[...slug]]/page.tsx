@@ -4,13 +4,13 @@ async function Docs({ params }: { params: Promise<{ slug: string[] }> }) {
   //   console.log(slug);
 
   let content;
-  if (slug.length === 2) {
+  if (slug?.length === 2) {
     content = (
       <p>
         Viewing docs for feature {slug.at(0)} and concept {slug.at(1)}
       </p>
     );
-  } else if (slug.length === 1) {
+  } else if (slug?.length === 1) {
     content = <p> Viewing docs for feature {slug.at(0)}</p>;
   } else content = <p>Docs home page</p>;
 
