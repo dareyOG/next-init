@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 async function ProductReview({
   params
 }: {
@@ -5,6 +7,7 @@ async function ProductReview({
 }) {
   const { reviewID, productID } = await params;
 
+  if (reviewID.toLowerCase() === 'apc') notFound();
   return (
     <h1>
       Review {reviewID} for product {productID}
