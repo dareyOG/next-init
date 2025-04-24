@@ -1,4 +1,6 @@
-import Footer from '@/ui/footer';
+import AuthLinks from '@/ui/auth-link';
+
+import './style.css';
 
 export const metadata = {
   title: 'Next.js',
@@ -7,11 +9,9 @@ export const metadata = {
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div>
+      <AuthLinks />
+      {children}
+    </div>
   );
 }
