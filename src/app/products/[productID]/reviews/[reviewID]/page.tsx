@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 async function ProductReview({
   params
@@ -8,6 +8,7 @@ async function ProductReview({
   const { reviewID, productID } = await params;
 
   if (reviewID.toLowerCase() === 'apc') notFound();
+  // if (reviewID.toLowerCase() === 'apc') redirect('/');
   return (
     <h1>
       Review {reviewID} for product {productID}
