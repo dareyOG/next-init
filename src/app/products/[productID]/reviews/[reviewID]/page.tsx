@@ -7,8 +7,10 @@ async function ProductReview({
 }) {
   const { reviewID, productID } = await params;
 
-  if (reviewID.toLowerCase() === 'apc') notFound();
-  // if (reviewID.toLowerCase() === 'apc') redirect('/');
+  if (reviewID.toUpperCase() === 'LP') notFound();
+  if (reviewID.toUpperCase() === 'PDP') redirect('/');
+  if (reviewID.toUpperCase() === 'APC') throw new Error('Error loading review');
+
   return (
     <h1>
       Review {reviewID} for product {productID}
