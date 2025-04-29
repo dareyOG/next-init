@@ -1,7 +1,7 @@
 import Footer from '@/ui/footer';
 import Header from '@/ui/header';
 import { Metadata } from 'next';
-import { ErrorWrapper } from './error-wrapper';
+// import { ErrorWrapper } from './error-wrapper';
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Header />
-        <ErrorWrapper>{children}</ErrorWrapper>
+        {/* <ErrorWrapper>{children}</ErrorWrapper> */}
+        {children}
         <Footer />
       </body>
     </html>
